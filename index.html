@@ -20,15 +20,44 @@
             </legend>
 
             <label for="">Input data</label>
-            <input type="text" id="inputtxt" placeholder="enter data here"> <br>
-
+            <input type="text" id="inputtxt" placeholder="enter text here"> 
             <button id="add" class="btn btn-primary">add to local storage</button> <br>
-            <button id="fetch" class="btn btn-success">fetch local data</button> <br>
 
             <label for="">Stored data</label>
-            <input type="text" id="outputtxt" placeholder="stored data will be displayed here">
+            <input type="text" id="outputtxt" placeholder="stored data will be displayed here" disabled> 
+            <button id="fetch" class="btn btn-success">fetch local data</button> <br>
+
+        </fieldset>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <fieldset>
+            <legend>session storage</legend>
+
+            <label for="">Input data</label>
+            <input type="text" placeholder="enter text here" id="inputtxtS" value="">
+            <button id="addS" class="btn btn-primary">Add to Session storage</button> <br>
+
+            <label for="">Stored data</label>
+            <input type="text" placeholder="stored data here" id="outputtxtS" value="">
+            <button id="fetchS" class="btn btn-success">Fetch Session data</button>
+        </fieldset>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <fieldset>
+            <legend>Cache storage</legend>
+            
+            <label for="">Input data</label>
+            <input type="text" placeholder="enter data here">
+            <button id="addC" class="btn btn-primary">Add to Cache Storage</button> <br>
+
+            <label for="">Stored data</label>
+            <input type="text" placeholder="stored data here" disabled>
+            <button id="fetchC" class="btn btn-success">Fetch Cache data</button>
         </fieldset>
     </div>
 </body>
-
 </html>
