@@ -19,6 +19,11 @@ body {
 
     min-height: 100vh;
 }
+/* ===============section================ */
+
+.section{
+    margin-top: 7%;
+}
 
 table {
     background: white;
@@ -46,7 +51,7 @@ table {
 .center {
     margin: 2% 10% 0;
 }
-
+/* ===========================footer============== */
 footer {
     background-color: #454749;
     color: #ffffff;
