@@ -12,6 +12,12 @@ body {
     color: #454749;
 
     font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 100vh;
 }
 
 table {
@@ -37,6 +43,86 @@ table {
     padding: 2rem;
 }
 
-.center{
-    margin: 0 auto;
+.center {
+    margin: 2% 10% 0;
 }
+
+footer {
+    background-color: #454749;
+    color: #ffffff;
+    margin-top: 7%;
+    width: 100%;
+    height: 150px;
+    font-size: 135%;
+}
+
+footer p {
+    margin-top: 1%;
+    color: #888;
+    text-align: center;
+}
+
+footer ul {
+    margin: 20px auto;
+    margin-top: 30px;
+    padding: 0px;
+    display: block;
+    text-decoration: none;
+    width: 267px;
+}
+
+footer ul li {
+    display: inline-block;
+    list-style: none;
+    padding:0 5px;
+}
+
+footer ul li a{
+    display: block;
+    /* background-color: #828282; */
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 26px;
+
+}
+
+ul li a i{
+    color: #fff;
+    padding: 6px 0px 0px 8px;
+}
+
+.gplus:hover {
+    transition-duration: 1s;
+    color: #dd4b39;
+}
+
+.github:hover{
+    transition-duration: 1s;
+    color: #333;
+}
+
+.medium:hover{
+    transition-duration: 1s;
+    color: #00ab6c;
+}
+
+.linkedin:hover{
+    transition-duration: 1s;
+    color: #0077b5;
+}
+
+.twitter:hover{
+    transition-duration: 1s;
+    color: #1da1f2;
+    /* background-color: #fff; */
+}
+
+footer ul li a:hover {
+    transition-duration: 1.0s;
+    /* background-color: #252b33; */
+} 
+
+/* .container{
+    width: 100vw;
+} */

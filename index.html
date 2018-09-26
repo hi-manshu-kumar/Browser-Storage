@@ -7,13 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Browser storage</title>
     <script src="./assets/index.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/index.css">
 </head>
 
 <body>
-    
+<header>
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Browser Storage</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">WebSiteName</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li >
+                    <a href="#">Page 1 </a>
+                  </li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+</header>
     <div class="container">
         <h1 class="text-center">Cookies vs. Local Storage vs. Session Storage</h1>
         <table class="table table-striped">
@@ -74,10 +120,10 @@
 
             <label for="">Input data</label>
             <input type="text" id="inputtxt" placeholder="enter text here">
-            <button id="add" class="btn btn-primary">Add to local storage</button> <br>
+            <button id="add" class="btn btn-primary">Add to local storage</button> <br> <br>
 
             <label for="">Stored data</label>
-            <input type="text" id="outputtxt" placeholder="stored data will be displayed here" disabled>
+            <input type="text" id="outputtxt" placeholder="stored data here" disabled>
             <button id="fetch" class="btn btn-success">Fetch local data</button> <br>
 
             <button class="btn btn-danger center" id="deleteLS">Delete localStorage</button>
@@ -93,7 +139,7 @@
 
             <label for="">Input data</label>
             <input type="text" placeholder="enter text here" id="inputtxtS" value="">
-            <button id="addS" class="btn btn-primary">Add to Session storage</button> <br>
+            <button id="addS" class="btn btn-primary ">Add to Session storage</button> <br> <br>
 
             <label for="">Stored data</label>
             <input type="text" placeholder="stored data here" id="outputtxtS" value="" disabled>
@@ -112,7 +158,7 @@
 
             <label for="">Input data</label>
             <input type="text" placeholder="enter data here" id="inputtxtc">
-            <button id="addC" class="btn btn-primary">Add to Cache Storage</button> <br>
+            <button id="addC" class="btn btn-primary">Add to Cache Storage</button> <br> <br>
 
             <label for="">Stored data</label>
             <input type="text" placeholder="stored data here" id="outputtxtC" disabled>
@@ -123,6 +169,21 @@
     </div>
     </div>
 
+    <footer>
+
+            <ul>
+                <li><a href="#"> <i class="fab fa-google-plus-g gplus"></i></a></li>
+                <li><a href="#"> <i class="fab fa-github-square github"></i></a></li>
+                <li><a href="#"> <i class="fab fa-twitter twitter"></i></a></li>
+                <li><a href="#"> <i class="fab fa-medium medium"></a></i></li>
+                <li><a href="#"> <i class="fab fa-linkedin-in linkedin"></i></a></li>
+            </ul>
+
+        
+        <p>
+            Copyright &copy; 2018 by Himank. All rights reserved. 
+        </p>
+    </footer>
 </body>
 
 </html>
