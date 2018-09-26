@@ -1,7 +1,7 @@
 window.addEventListener("load", bindEvents);
 
 
-function bindEvents(){
+function bindEvents() {
     console.log("hi there");
     // window.getElementById('add').addEventListener("click", storeLocal);
     document.getElementById('add').addEventListener("click", storeLocal);
@@ -12,43 +12,48 @@ function bindEvents(){
 
     document.getElementById("addC").addEventListener("click", storeCache);
     document.getElementById("fetchC").addEventListener("click", fetchCache);
+
+    document.getElementById("deleteLS").addEventListener("click", deleteLs);
+    document.getElementById("deleteSS").addEventListener("click", deleteSs);
+    document.getElementById("deleteCS").addEventListener("click", deleteCs);
+
 }
 
-function storeLocal(){
+function storeLocal() {
     console.log("local storing done");
     var hi = document.getElementById("inputtxt").value;
-    
-    localStorage.myvalue = hi ;
+
+    localStorage.myvalue = hi;
 }
 
-function fetchLocal(){
+function fetchLocal() {
     console.log("fetching local stored data ", localStorage.myvalue);
     // var inputFeild = 
     document.getElementById("outputtxt").value = localStorage.myvalue;
 }
 
-function storeSession(){
+function storeSession() {
     console.log("session storing data");
     var temp = document.getElementById("inputtxtS").value;
 
-    sessionStorage.myvalue = temp ;
+    sessionStorage.myvalue = temp;
 }
 
-function fetchSession(){
+function fetchSession() {
     console.log("fetching session storage", sessionStorage.myvalue);
 
     document.getElementById("outputtxtS").value = sessionStorage.myvalue;
 }
 
-function storeCache(){
+function storeCache() {
     console.log("Cache storing done");
     var temp = document.getElementById("inputtxtc").value;
 
     document.cookie = `myvalue = ${temp}`;
 }
 
-function fetchCache(){
-    var x = document.cookie.split( '=' );
+function fetchCache() {
+    var x = document.cookie.split('=');
 
     console.log("fetching cache data", x[1]);
 
@@ -56,6 +61,24 @@ function fetchCache(){
 
 }
 
+function deleteLs() {
+    localStorage.clear();
+    alert("local storage deleted...")
+}
+
+function deleteSs() {
+    sessionStorage.clear();
+    alert("Session Storage deleted...");
+}
+
+function deleteCs() {
+    var d = new Date();
+    d.setTime(d.getTime() - (1000 * 60 * 60 * 24));
+    var expires = "expires=" + d.toGMTString();
+    window.document.cookie = "myvalue" + "=" + "; " + expires;
+
+    alert("Cache storage deleted...");
+}
 /* <html>
 <head>
 	<title>Cookie!!!</title>
