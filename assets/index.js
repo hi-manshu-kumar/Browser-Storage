@@ -11,7 +11,7 @@ function bindEvents(){
     document.getElementById("fetchS").addEventListener("click", fetchSession);
 
     document.getElementById("addC").addEventListener("click", storeCache);
-    document.getElementById("fetchS").addEventListener("click", fetchCache);
+    document.getElementById("fetchC").addEventListener("click", fetchCache);
 }
 
 function storeLocal(){
@@ -39,3 +39,61 @@ function fetchSession(){
 
     document.getElementById("outputtxtS").value = sessionStorage.myvalue;
 }
+
+function storeCache(){
+    console.log("Cache storing done");
+    var temp = document.getElementById("inputtxtc").value;
+
+    document.cookie = `myvalue = ${temp}`;
+}
+
+function fetchCache(){
+    var x = document.cookie.split( '=' );
+
+    console.log("fetching cache data", x[1]);
+
+    document.getElementById("outputtxtC").value = x[1];
+
+}
+
+/* <html>
+<head>
+	<title>Cookie!!!</title>
+	<script type="text/javascript">
+		function createCookie(cookieName,cookieValue,daysToExpire)
+        {
+          var date = new Date();
+          date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+          document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+        }
+		function accessCookie(cookieName)
+        {
+          var name = cookieName + "=";
+          var allCookieArray = document.cookie.split(';');
+          for(var i=0; i<allCookieArray.length; i++)
+          {
+            var temp = allCookieArray[i].trim();
+            if (temp.indexOf(name)==0)
+            return temp.substring(name.length,temp.length);
+       	  }
+        	return "";
+        }
+		function checkCookie()
+        {
+          var user = accessCookie("testCookie");
+          if (user!="")
+        	alert("Welcome Back " + user + "!!!");
+          else
+          {
+            user = prompt("Please enter your name");
+            num = prompt("How many days you want to store your name on your computer?");
+            if (user!="" && user!=null)
+            {
+            createCookie("testCookie", user, num);
+            }
+          }
+        }
+	</script>
+</head>
+<body onload="checkCookie()"></body>
+</html>*/

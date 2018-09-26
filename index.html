@@ -27,6 +27,7 @@
             <input type="text" id="outputtxt" placeholder="stored data will be displayed here" disabled> 
             <button id="fetch" class="btn btn-success">fetch local data</button> <br>
 
+            <button class="btn btn-danger">Delete localStorage</button>
         </fieldset>
     </div>
     <hr>
@@ -40,8 +41,10 @@
             <button id="addS" class="btn btn-primary">Add to Session storage</button> <br>
 
             <label for="">Stored data</label>
-            <input type="text" placeholder="stored data here" id="outputtxtS" value="">
-            <button id="fetchS" class="btn btn-success">Fetch Session data</button>
+            <input type="text" placeholder="stored data here" id="outputtxtS" value="" disabled>
+            <button id="fetchS" class="btn btn-success">Fetch Session data</button> <br>
+
+            <button class="btn btn-danger">Delete sessionStorage</button>
         </fieldset>
     </div>
     <hr>
@@ -51,12 +54,14 @@
             <legend>Cache storage</legend>
             
             <label for="">Input data</label>
-            <input type="text" placeholder="enter data here">
+            <input type="text" placeholder="enter data here" id="inputtxtc">
             <button id="addC" class="btn btn-primary">Add to Cache Storage</button> <br>
 
             <label for="">Stored data</label>
-            <input type="text" placeholder="stored data here" disabled>
-            <button id="fetchC" class="btn btn-success">Fetch Cache data</button>
+            <input type="text" placeholder="stored data here" id="outputtxtC" disabled >
+            <button id="fetchC" class="btn btn-success">Fetch Cache data</button> <br>
+
+            <button class="btn btn-danger">Delete CacheData</button>
         </fieldset>
     </div>
 </body>
