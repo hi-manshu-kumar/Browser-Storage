@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Browser storage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
     <script src="./assets/index.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/index.css">
+
+    <script src="./assets/module/app.js"></script>
+    <script src="./assets/config/urlconfig.js"></script>
+
+    <script src="./assets/routes/spa-routes.js"></script>
+
+    <!-- <script src="./assets/factory/offerfactory.js"></script> -->
+    <!-- <script src="./assets/controller/offercontroller.js"></script> -->
+    <!-- <script src="./assets/controller/homectrl.js"></script>
+    <script src="./assets/controller/"></script> -->
+    
 </head>
 
-<body>
+<body ng-app = "spaapp">
 <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -30,10 +43,10 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#">Home</a></li>
                     <li>
-                        <a href="#">Local Storage </a>
+                        <a ng-href="#">Local Storage </a>
                     </li>
-                    <li><a href="#session">Session Storage</a></li>
-                    <li><a href="#cache">Cache Storage</a></li>
+                    <li><a ng-href="#session">Session Storage</a></li>
+                    <li><a ng-href="#cache">Cache Storage</a></li>
                 </ul>
 
             </div>
@@ -144,11 +157,16 @@
             <label for="">Stored data</label>
             <input type="text" placeholder="stored data here" id="outputtxtC" disabled>
             <button id="fetchC" class="btn btn-success">Fetch Cache data</button> <br>
-
+            
+            <div id="main">
+                <ng-view></ng-view>
+            </div>
             <button class="btn btn-danger center" id="deleteCS">Delete CacheData</button>
         </fieldset>
     </div>
     </div>
+
+
 
     <footer>
 
